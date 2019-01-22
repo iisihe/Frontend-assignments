@@ -1,0 +1,49 @@
+.index {
+    margin: 30px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button {
+    background-color: lightgrey;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    text-align: center;
+    margin: 4px 2px;
+    padding: 5px 25px;
+}
+
+.righttext {
+    text-align: right;
+    margin: 5px;
+}
+
+.center {
+    text-align: center;
+    margin: 5px;
+}
+
+.frameborder {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.textarea {
+    margin: 30px;
+}
+
+.px110before {
+    margin-left: 110px
+}
+

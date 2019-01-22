@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="jquery.js"></script>
+    <script src="leaflet.js"
+            integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+            crossorigin=""></script>
+    <script src="exercise3.js"></script>
+</head>
+
+<body>
+
+<div class="index">
+
+    <div class="row">
+        <div class="col-2 righttext">
+            Select the bus line:
+        </div>
+        <!-- Menu for choosing busline -->
+        <div class="col-3">
+            <select id=busline name="busline"></select>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Buttons -->
+        <div class="col-3">
+            <input class="button" type="submit" value="Show buses" onclick=showBuses()>
+        </div>
+        <div class="col-3 center">
+            <input class="button" type="submit" value="Refresh" onclick=refresh()>
+        </div>
+        <div class="col-3 right">
+            <input class="button" type="submit" value="Show route" onclick=drawRoute()>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Map -->
+        <div class="col-11 frameborder">
+            <div id="map"></div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

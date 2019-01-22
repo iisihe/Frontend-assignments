@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercise 1</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/barcodes/JsBarcode.code128.min.js"></script>
+    <script src="exercise1.js"></script>
+</head>
+
+<body>
+<div class="index">
+
+<div class="row">
+    <div class="column">
+        <form>
+            Virtual bar code:
+            <!-- Text box where to enter the code. Text field changes to light grey when entering te code -->
+            <input type="text" id="code" name="code" value="enter the virtual code here" size="25">
+            <br> <br>
+            <div class="px110before">
+                <!-- Decode-button -->
+                <input id="decode" type="button" class="button" value="Decode"/>
+            </div>
+        </form>
+    </div>
+    <div class="column">
+        <br> <br>
+        <div class="righttext">
+            <!-- Hide-button to hide the information section.
+            Button's text changes between "Show" and "Hide" when clicking it -->
+            <input id="hide" type="button" class="button" value="Hide" onclick="changeText()">
+        </div>
+    </div>
+</div>
+
+<div id="hidearea">
+    <!-- Black border frames the information section -->
+    <div class="frameborder">
+            <div class="textarea">
+                <div class="row">
+                    <!-- Texts and text fields to where the information from the code appears -->
+                    <div class="column">
+                        Payee's IBAN:
+                        <input id="iban" type="text">
+                        <br> <br>
+                        Payment reference:
+                        <input id="reference" type="text">
+                        <br> <br>
+                    </div>
+                    <div class="column">
+                        Amount to be paid:
+                        <input id="amount" type="text">
+                        e
+                        <br> <br>
+                        Due date:
+                        <input id="duedate" type="text">
+                        <br> <br>
+                    </div>
+                </div>
+                <div class="center">
+                    <!-- Generated bar code -->
+                    <img id="barcode"/>
+                </div>
+            </div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

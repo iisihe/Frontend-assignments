@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="jquery.js"></script>
+    <script src="exercise2.js"></script>
+    <script src="leaflet.js"
+            integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+            crossorigin=""></script>
+</head>
+
+<body>
+
+<div class="index">
+
+    <div class="row">
+        <div class="col-2 righttext">
+            Select your contry
+            <br> <br>
+            ZIP code
+        </div>
+
+        <!-- Menu for choosing country -->
+        <div class="col-3">
+            <select id=country name="country">
+                <option value="fi">Finland</option>
+                <option value="se">Sweden</option>
+                <option value="fr">France</option>
+                <option value="de">Germany</option>
+            </select>
+            <br> <br>
+            <!-- Box where to write zipcode -->
+            <input type="text" id="zipcode">
+            <br> <br>
+            <input class="button" type="submit" value="Search" onclick= getPlace()>
+        </div>
+
+        <!-- History area for previous searches -->
+        <div class="col-3 frameborder">
+            <div id="historyarea" class="historyarea">Search history is empty.</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2"></div>
+        <!-- Table for place information -->
+        <div class="col-6">
+            <table id="table" style="width:100%">
+                <tr>
+                    <thead>
+                        <th>Place name</th>
+                        <th>Longitude</th>
+                        <th>Latitude</th>
+                    </thead>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2"></div>
+        <!-- Map -->
+        <div class="col-8">
+            <div id="map"></div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
